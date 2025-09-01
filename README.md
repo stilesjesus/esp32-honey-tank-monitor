@@ -39,17 +39,25 @@ A wireless IoT monitoring system using 5 ESP32 microcontrollers with ESP-NOW com
 
 ### Deployed System
 ![Waterproof Sensor Case - Exterior](images/sensor-case-exterior.jpg)
+<img src="images/sensor-case-exterior.jpg" alt="Waterproof Sensor Case - Exterior" width="600">
 *Weatherproof sensor enclosure with ESP32 and A02YYUW ultrasonic sensor*
 
 ![Waterproof Sensor Case - Interior](images/sensor-case-interior.jpg) 
+<img src="images/sensor-case-interior.jpg" alt="Waterproof Sensor Case - Interior" width="600">
+
 *Internal layout showing ESP32, sensor connections, and battery pack*
 
 ![Webserver and Siren Setup](images/webserver-siren-setup.jpg)
+<img src="images/webserver-siren-setup.jpg" alt="Webserver and Siren Setup" width="600">
+
 *Webserver MCU and siren controller with audio alert system*
 
 ### Web Interface
 ![Tank Monitoring Dashboard](images/website-dashboard.jpg)
+<img src="images/website-dashboard.jpg" alt="Tank Monitoring Dashboard" width="700">
+
 *Real-time web interface showing tank levels, battery status, and siren controls*
+
 
 ## Hardware Requirements
 
