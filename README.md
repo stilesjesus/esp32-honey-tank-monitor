@@ -75,7 +75,7 @@ A wireless IoT monitoring system using 5 ESP32 microcontrollers with ESP-NOW com
 ### 1. Get MAC Addresses
 Each ESP32 has a unique MAC address needed for ESP-NOW communication.
 
-1. Upload `utilities/mac-address-finder/` sketch to each ESP32
+1. Upload `utilities/mac_address_finder/` sketch to each ESP32
 2. Open Serial Monitor (115200 baud) 
 3. Record the **STA MAC address** for each board
 4. Label each board (e.g., "Sensor 1", "Sensor 2", "Siren", "Webserver")
@@ -84,7 +84,7 @@ Each ESP32 has a unique MAC address needed for ESP-NOW communication.
 
 Update the following MAC address arrays in each project:
 
-**In `siren-mcu/src/main.cpp` and `webserver-mcu/src/main.cpp`:**
+**In `siren_mcu/src/main.cpp` and `webserver_mcu/src/main.cpp`:**
 ```cpp
 static const uint8_t MAC_SENSORS[3][6] = {
   {0x78,0x1C,0x3C,0xB7,0xD1,0x50}, // Replace with Sensor 1 STA MAC
@@ -93,13 +93,13 @@ static const uint8_t MAC_SENSORS[3][6] = {
 };
 ```
 
-**In `sensor-mcu/src/main.cpp`:**
+**In `sensor_mcu/src/main.cpp`:**
 ```cpp
 static const uint8_t MAC_SIREN[6]     = {0x6C,0xC8,0x40,0x4E,0x00,0x3C}; // Replace with Siren STA MAC
 static const uint8_t MAC_WEBSERVER[6] = {0xCC,0xDB,0xA7,0x92,0xC2,0xB8}; // Replace with Webserver STA MAC
 ```
 
-**In `webserver-mcu/src/main.cpp`:**
+**In `webserver_mcu/src/main.cpp`:**
 ```cpp
 static const uint8_t MAC_SIREN[6] = {0x6C,0xC8,0x40,0x4E,0x00,0x3C}; // Replace with Siren STA MAC
 
@@ -111,7 +111,7 @@ const char* WIFI_PASS = "YOUR_WIFI_PASSWORD"; // Replace with your password
 ### 3. Set Tank IDs
 Each sensor needs a unique tank ID (0, 1, or 2).
 
-In `sensor-mcu/src/main.cpp`, update the build flag:
+In `sensor_mcu/src/main.cpp`, update the build flag:
 ```cpp
 #ifndef TANK_ID
 #define TANK_ID 0  // Change to 0, 1, or 2 for each sensor
