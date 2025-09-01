@@ -131,15 +131,15 @@ build_flags = -DTANK_ID=0  ; Use 0, 1, or 2
 ### 4. Hardware Connections
 
 **Sensor MCU:**
-- A02YYUW VCC → 5V
+- A02YYUW VCC → 3V
 - A02YYUW GND → GND  
 - A02YYUW TX → GPIO 5 (ESP32 RX)
 - A02YYUW RX → GPIO 18 (ESP32 TX)
 
 **Siren MCU:**
-- Siren + → 12V power supply +
+- Siren + → 3V power supply +
 - Siren - → IRLZ44N Drain
-- IRLZ44N Source → 12V power supply -
+- IRLZ44N Source → 3V power supply -
 - IRLZ44N Gate → GPIO 25 (via 220Ω resistor)
 
 ### 5. Deploy and Test
