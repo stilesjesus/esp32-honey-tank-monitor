@@ -91,22 +91,24 @@ Update the following MAC address arrays in each project:
 
 **In `siren_mcu/src/main.cpp` and `webserver_mcu/src/main.cpp`:**
 ```cpp
+// ================== Peer MACs (STA MACs) ==================
+static const uint8_t MAC_SIREN[6] = {0x00,0x00,0x00,0x00,0x00,0x00}; // Replace with Siren STA MAC
 static const uint8_t MAC_SENSORS[3][6] = {
-  {0x78,0x1C,0x3C,0xB7,0xD1,0x50}, // Replace with Sensor 1 STA MAC
-  {0xCC,0xDB,0xA7,0x95,0xB0,0x54}, // Replace with Sensor 2 STA MAC  
-  {0x10,0x06,0x1C,0xF6,0x31,0x24}  // Replace with Sensor 3 STA MAC
+  {0x00,0x00,0x00,0x00,0x00,0x00}, // Replace with Sensor 1 STA MAC
+  {0x00,0x00,0x00,0x00,0x00,0x00}, // Replace with Sensor 2 STA MAC  
+  {0x00,0x00,0x00,0x00,0x00,0x00}  // Replace with Sensor 3 STA MAC
 };
 ```
 
 **In `sensor_mcu/src/main.cpp`:**
 ```cpp
-static const uint8_t MAC_SIREN[6]     = {0x6C,0xC8,0x40,0x4E,0x00,0x3C}; // Replace with Siren STA MAC
-static const uint8_t MAC_WEBSERVER[6] = {0xCC,0xDB,0xA7,0x92,0xC2,0xB8}; // Replace with Webserver STA MAC
+static const uint8_t MAC_SIREN[6]     = {0x00,0x00,0x00,0x00,0x00,0x00}; // Replace with Siren STA MAC
+static const uint8_t MAC_WEBSERVER[6] = {0x00,0x00,0x00,0x00,0x00,0x00}; // Replace with Webserver STA MAC
 ```
 
 **In `webserver_mcu/src/main.cpp`:**
 ```cpp
-static const uint8_t MAC_SIREN[6] = {0x6C,0xC8,0x40,0x4E,0x00,0x3C}; // Replace with Siren STA MAC
+static const uint8_t MAC_SIREN[6] = {0x00,0x00,0x00,0x00,0x00,0x00}; // Replace with Siren STA MAC
 
 // Update Wi-Fi credentials:
 const char* WIFI_SSID = "YOUR_WIFI_SSID";     // Replace with your network name
